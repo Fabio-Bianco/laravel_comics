@@ -1,10 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
+
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('/characters', function () {
     return view('characters');
