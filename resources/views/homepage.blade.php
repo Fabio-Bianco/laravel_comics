@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section('title', 'Homepage')
 
-<body>
-    @include('layouts.partials.header')
-    <h1>corpo del sito</h1>
-    @include('layouts.partials.footer')
-</body>
-
-</html>
+@section('content')
+  <h1>Corpo del sito</h1>
+@endsection
