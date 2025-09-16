@@ -13,10 +13,12 @@
 <body>
   @include('layouts.partials.header')
 
-  <main class="container py-4">
+  {{-- Jumbotron e contenuto principale --}}
+  <main style="padding: 0;"> <!-- Rimuove padding dal main -->
     @yield('content')
   </main>
 
   @include('layouts.partials.footer')
 </body>
+</html>
 </html>
