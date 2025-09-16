@@ -78,27 +78,20 @@ body {
   line-height: 1.6;
 }
 
-/* Jumbotron full-bleed */
+//* Jumbotron full-bleed */
 .jumbotron {
-  width: 100vw; /* Larghezza pari al viewport */
-  max-width: 100vw; /* Evita restrizioni sulla larghezza */
+  width: 100%;
   overflow: hidden;
-  margin: 0; /* Rimuove margini indesiderati */
-  position: relative; /* Necessario per il contenuto assoluto */
-  padding-top: 25%; /* Altezza dinamica: 25% della larghezza */
 }
 
-.img-jumbotron {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* L'immagine occupa tutta la larghezza */
-  height: 100%; /* L'immagine occupa tutta l'altezza del contenitore */
-  object-fit: contain; /* Ridimensiona l'immagine per intero */
-  background-color: #000; /* Aggiunge uno sfondo per eventuali spazi vuoti */
+.jumbotron-top {
+  height: 20rem;            /* ~320px; alza/abbassa a gusto: 18–24rem */
+  background-size: cover;   /* riempie tagliando */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* Badge "Current Series" sovrapposto */
+/* Sezione card e badge */
 .comics-section {
   position: relative;
   background-color: #1c1c1c;
@@ -107,20 +100,14 @@ body {
 
 .current-series-btn {
   position: absolute;
-  top: -18px;             /* sporge sul jumbotron, come nel sito DC */
-  left: 0;
+  top: -18px;               /* sporge sul jumbotron come DC */
+  left: 0;                  /* allineato alla container */
   background: #0282f9;
   color: #fff;
   font-weight: 700;
   padding: .5rem 1rem;
   text-transform: uppercase;
   font-size: 1.1rem;
-}
-
-/* Sezione fumetti */
-.comics-section {
-  background-color: #1c1c1c;
-  padding: 2rem 0;
 }
 
 /* Card */
@@ -151,7 +138,7 @@ body {
   }
 }
 
-/* Load More button */
+/* Load More */
 .load-more {
   display: block;
   margin: 2rem auto 0;
@@ -163,14 +150,6 @@ body {
   border: none;
   border-radius: 0;
   transition: background-color .2s;
-
-  &:hover {
-    background-color: #0265c7;
-    color: #fff;
-  }
 }
-.load-more:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(2, 130, 249, .5);
-}
-
+.load-more:hover { background-color: #0265c7; }
+.load-more:focus { outline: none; box-shadow: 0 0 0 3px rgba(2,130,249,.5); }

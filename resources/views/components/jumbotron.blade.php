@@ -1,3 +1,3 @@
 <div class="jumbotron">
-  <img src="{{ asset('img/jumbotron.jpg') }}" alt="DC Jumbotron" class="img-jumbotron">
+  <div class="jumbotron-top" style="background-image: url('{{ asset('img/jumbotron.jpg') }}');"></div>
 </div>
