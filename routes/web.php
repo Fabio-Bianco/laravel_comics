@@ -10,20 +10,20 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
+Route::view('/characters', 'characters')->name('characters');
+Route::view('/comics', 'comics')->name('comics');
+Route::view('/movies', 'movies')->name('movies');
+Route::view('/tv', 'tv')->name('tv');
+Route::view('/games', 'games')->name('games');
+Route::view('/videos', 'videos')->name('videos');
+Route::view('/news', 'news')->name('news');
+Route::view('/shop', 'shop')->name('shop');
 
-
-Route::get('/comics', function () {
-    return view('comics');
-})->name('comics');
-
-
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
-
+Route::view('/signup', 'signup')->name('signup');
+Route::post('/signup', function () {
+    // Logica per gestire i dati del form
+    return redirect()->route('signup')->with('success', 'Sign-Up completed successfully!');
+})->name('signup.submit');
 Route::get('/tv', function () {
     return view('tv');
 })->name('tv');
@@ -51,3 +51,9 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
+
+Route::view('/signup', 'signup')->name('signup');
+Route::post('/signup', function () {
+    // Logica per gestire i dati del form
+    return redirect()->route('signup')->with('success', 'Sign-Up completed successfully!');
+})->name('signup.submit');

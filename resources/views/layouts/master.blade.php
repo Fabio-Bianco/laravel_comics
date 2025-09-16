@@ -18,7 +18,9 @@
     @yield('content')
   </main>
 
+  {{-- Barra dei servizi --}}
+  @yield('services-bar')
+
   @include('layouts.partials.footer')
 </body>
-</html>
 </html>

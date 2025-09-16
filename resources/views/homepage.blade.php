@@ -30,3 +30,8 @@
     </div>
   </section>
 @endsection
+
+@section('services-bar')
+  <x-services-bar />
+
+@endsection

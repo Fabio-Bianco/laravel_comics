@@ -1,5 +1,5 @@
 <header class="py-3">
-  <img src="{{ asset('img/dc-logo.png') }}" alt="logo DC Comics" height="50">
+  <a href="{{ route('homepage') }}"><img src="{{ asset('img/dc-logo.png') }}" alt="logo DC Comics" height="50"></a>
 
   <nav>
     <ul class="nav">
