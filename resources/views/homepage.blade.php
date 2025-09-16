@@ -5,7 +5,9 @@
 @section('content')
   <section class="comics-section">
     <div class="container">
-      <h2 class="section-title">Current Series</h2>
+      <div class="current-series-btn">Current Series</div>
+
+      {{-- Griglia fumetti --}}
 
       <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
         @forelse ($comics as $comic)
